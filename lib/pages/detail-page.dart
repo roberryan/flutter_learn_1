@@ -3,6 +3,7 @@ import 'package:flutter_cubit/widgets/app_large_text.dart';
 import 'package:flutter_cubit/widgets/app_text.dart';
 
 import '../misc/colors.dart';
+import '../widgets/app-button.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);
@@ -108,19 +109,7 @@ class _DetailPageState extends State<DetailPage> {
                       AppLargeText(text: "Number of people in your group", size: 12, color: Colors.black26,),
                       Wrap(
                         children: List.generate(5, (index) {
-                          return Container(
-                            alignment: Alignment.center,
-                            margin: EdgeInsets.only(right: 10),
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: (index == 0
-                                  ? Colors.black87
-                                  : Colors.black12),
-                            ),
-                            child: AppText(text: (index + 1).toString()),
-                          );
+                          return AppButton(text: index.toString(), color: Colors.black12,);
                         }),
                       ),
                     ],
@@ -132,3 +121,5 @@ class _DetailPageState extends State<DetailPage> {
     );
   }
 }
+
+

@@ -109,7 +109,12 @@ class _DetailPageState extends State<DetailPage> {
                       AppLargeText(text: "Number of people in your group", size: 12, color: Colors.black26,),
                       Wrap(
                         children: List.generate(5, (index) {
-                          return AppButton(text: index.toString(), color: Colors.black12,);
+                          return AppButton(
+                            size: 60,
+                            text: index.toString(),
+                            backgroundColor: Colors.black12,
+                            borderColor: Colors.black12,
+                            color: Colors.black87,);
                         }),
                       ),
                     ],
